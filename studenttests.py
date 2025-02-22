@@ -278,11 +278,11 @@ class TestInitializeZero(unittest.TestCase):
     def test_failed_malloc_initialize(self):
         t = AssemblyTest(self, "../coverage-src/initialize_zero.s")
         # input the length of the desired array (dont)
+        t.input_scalar("a0", 1)
         # call the `initialize_zero` function
         t.call("initialize_zero")
-        # check that the register a0 contains the correct array (hint: look at the check_array_pointer function in framework.py)
         t.check_scalar("a0", 26)
-        t.execute(code = 26)
+        t.execute(fail="malloc", code=26)
 
     @classmethod
     def tearDownClass(cls):
