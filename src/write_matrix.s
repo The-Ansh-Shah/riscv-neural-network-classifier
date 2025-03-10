@@ -48,12 +48,13 @@ write_matrix:
     sw s2 0(sp)
     sw s3 4(sp)
     mv a1 sp
-    addi sp sp 8
     
     li a2 2
     li a3 4
     
     jal ra fwrite
+    
+    addi sp sp 8
     
     li t0 2
     bne t0 a0 fwrite_error
