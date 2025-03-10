@@ -164,10 +164,27 @@ continue:
     
     addi sp sp -4
     sw a0 0(sp)
+    
+    # Free o
     mv a0 s7
     jal ra free
+
+    # Free h
     mv a0 s5
     jal ra free
+
+    # Free m0
+    mv a0 s0
+    jal ra free
+
+    # Free m1
+    mv a0 s1
+    jal ra free
+
+    # Free input 
+    mv a0 s2
+    jal ra free
+
     lw a0 0(sp)
     addi sp sp 4
     
