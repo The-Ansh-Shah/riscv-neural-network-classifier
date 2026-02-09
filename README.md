@@ -1,1 +1,1 @@
-# CS61C RISCV Neural Network Classifier
+# RISCV Neural Network Classifier
