@@ -1,1 +1,1 @@
-# 61C Project 2: CS61Classify
+# CS61C RISCV Neural Network Classifier
